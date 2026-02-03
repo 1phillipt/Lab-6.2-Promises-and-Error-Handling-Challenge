@@ -1,0 +1,1 @@
+import { fetchProductCatalog, fetchProductReviews, fetchSalesReport } from "./apiSimulator.js";

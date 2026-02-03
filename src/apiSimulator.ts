@@ -4,7 +4,7 @@ export type Product = {
   price: number;
 };
 
-type Review = {
+export type Review = {
   reviewer: string;
   rating: number;
   comment: string;
@@ -16,7 +16,7 @@ export type SalesReport = {
   averagePrice: number;
 };
 
-const fetchProductCatalog = (): Promise<{ id: number; name: string; price: number }[]
+export const fetchProductCatalog = (): Promise<{ id: number; name: string; price: number }[]
 > => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -34,7 +34,7 @@ const fetchProductCatalog = (): Promise<{ id: number; name: string; price: numbe
 
 console.log(fetchProductCatalog)
 
-const fetchProductReviews = (productId:number): Promise<Review[]> =>{
+export const fetchProductReviews = (productId:number): Promise<Review[]> =>{
 
  return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -51,7 +51,7 @@ const fetchProductReviews = (productId:number): Promise<Review[]> =>{
   });
 };
 
- const fetchSalesReport = (): Promise<SalesReport> => {
+ export const fetchSalesReport = (): Promise<SalesReport> => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (Math.random() < 0.85) {
