@@ -51,3 +51,18 @@ const fetchProductReviews = (productId:number): Promise<Review[]> =>{
   });
 };
 
+ const fetchSalesReport = (): Promise<SalesReport> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (Math.random() < 0.85) {
+        resolve({
+          totalSales: 25000,
+          unitsSold: 40,
+          averagePrice: 625,
+        });
+      } else {
+        reject("Failed to fetch sales report");
+      }
+    }, 1000);
+  });
+};
