@@ -1,3 +1,9 @@
+
+type Review = {
+  reviewer: string;
+  rating: number;
+  comment: string;
+};
 const fetchProductCatalog = (): Promise<{ id: number; name: string; price: number }[]
 > => {
   return new Promise((resolve, reject) => {
@@ -13,4 +19,9 @@ const fetchProductCatalog = (): Promise<{ id: number; name: string; price: numbe
     }, 1000);
   });
 };
+
 console.log(fetchProductCatalog)
+
+const fetchProductReviews =(productId:number):Promise<review[]>=>{
+
+}
